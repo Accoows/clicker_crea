@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldmine Clicker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Container principal -->
+  <div class="container">
+    <!-- Partie gauche -->
+    <div class="left">
+      <h1>Goldmine Clicker</h1>
+      <p id="goldmine-count">Gold: 0</p>
+      <img src="img/wagon.png" alt="Goldmine" id="goldmine" />
+      <!-- Section séparée pour éviter de décaler le wagon -->
+      <div class="stats-button-wrapper">
+        <button id="toggle-stats">📊 Statistiques</button>
+      </div>
+    </div>
+
+    <!-- Partie droite -->
+    <div class="right">
+      <h1>Magasin</h1>
+      <div id="buy-mode">
+        <button data-amount="1">x1</button>
+        <button data-amount="10">x10</button>
+        <button data-amount="100">x100</button>
+      </div>
+
+
+      <div id="shop">
+        <div class="shop-item" data-item="mineur">
+          <div class="shop-content">
+            <img src="img/mineur.png" alt="Mineur" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Mineur</span>
+                <span class="shop-count" id="count-mineur">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-mineur">10 or</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-item" data-item="wagon">
+          <div class="shop-content">
+            <img src="img/wagon.png" alt="Wagon" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Wagon</span>
+                <span class="shop-count" id="count-wagon">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-wagon">100 or</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-item" data-item="camion">
+          <div class="shop-content">
+            <img src="img/camion.png" alt="Camion" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Camion</span>
+                <span class="shop-count" id="count-camion">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-camion">500 or</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-item" data-item="pelleteuse">
+          <div class="shop-content">
+            <img src="img/pelleteuse.png" alt="Pelleteuse" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Pelleteuse</span>
+                <span class="shop-count" id="count-pelleteuse">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-pelleteuse">1500 or</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-item" data-item="usine">
+          <div class="shop-content">
+            <img src="img/usine.png" alt="Usine" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Usine</span>
+                <span class="shop-count" id="count-usine">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-usine">5000 or</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-item" data-item="camion_de_mine">
+          <div class="shop-content">
+            <img src="img/camion_de_mine.png" alt="Camion de mine" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Camion de mine</span>
+                <span class="shop-count" id="count-camion_de_mine">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-camion_de_mine">10000 or</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-item" data-item="excavatrice">
+          <div class="shop-content">
+            <img src="img/excavatrice.png" alt="Excavatrice" class="shop-icon">
+            <div class="shop-info">
+              <div class="shop-top">
+                <span class="shop-name">Excavatrice</span>
+                <span class="shop-count" id="count-excavatrice">x0</span>
+              </div>
+              <span class="shop-cost" id="cost-excavatrice">50000 or</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Popup des statistiques -->
+  <div id="stats-popup" class="hidden">
+    <div class="stats-content">
+      <span id="close-stats">&times;</span>
+      <h3>Statistiques</h3>
+      <p id="startDate">Début de la partie : -</p>
+      <p id="cps">Or/sec : 0</p>
+      <p id="clicks">Clics manuels : 0</p>
+      <p id="personnel">Personnels (curseurs) : 0</p>
+      <p id="infra">Infrastructures (mines) : 0</p>
+      <p id="total">Total or généré : 0</p>
+      <button id="reset-game" class="reset-button">Réinitialiser la partie</button>
+    </div>
+  </div>
+
+  <!-- Script principal -->
+  <script src="clicker.js"></script>
+</body>
+
+</html>
